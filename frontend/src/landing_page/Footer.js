@@ -65,8 +65,8 @@ function Footer() {
               <li><Link to="/press">Press & media</Link></li>
               <li><Link to="/careers">Careers</Link></li>
               <li><Link to="/csr">Zerodha Cares (CSR)</Link></li>
-              <li><a href="https://zerodha.tech" target="_blank" rel="noreferrer">Zerodha.tech</a></li>
-              <li><a href="https://github.com/zerodhatech" target="_blank" rel="noreferrer">Open source</a></li>
+              <li><a href="#" target="_blank" rel="noreferrer">Zerodha.tech</a></li>
+              <li><a href="#" target="_blank" rel="noreferrer">Open source</a></li>
             </ul>
           </div>
 
@@ -89,10 +89,10 @@ function Footer() {
         <div className="row mt-4 legal-disclaimer">
           <div className="col">
             <p className="text-muted small">
-              Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Commodity Trading through Zerodha Commodities Pvt. Ltd. MCX: 46025; NSE-50001 – SEBI Registration no.: INZ000038238 Registered Address: Zerodha Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any complaints pertaining to securities broking please write to <a href="mailto:complaints@zerodha.com">complaints@zerodha.com</a>, for DP related to <a href="mailto:dp@zerodha.com">dp@zerodha.com</a>. Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI | ICF
+              Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Commodity Trading through Zerodha Commodities Pvt. Ltd. MCX: 46025; NSE-50001 – SEBI Registration no.: INZ000038238 Registered Address: Zerodha Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any complaints pertaining to securities broking please write to <a href="#">complaints@zerodha.com</a>, for DP related to <a href="#">dp@zerodha.com</a>. Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI | ICF
             </p>
             <p className="text-muted small">
-              For complaints: <a href="mailto:complaints@zerodha.com">complaints@zerodha.com</a>, DP: <a href="mailto:dp@zerodha.com">dp@zerodha.com</a>.<br />
+              For complaints: <a href="#">complaints@zerodha.com</a>, DP: <a href="#">dp@zerodha.com</a>.<br />
               Please read the <Link to="/risk-disclosure">Risk Disclosure Document</Link> as prescribed by SEBI.
             </p>
             <p className="text-muted small">
