@@ -17,7 +17,7 @@ const uri = process.env.MONGO_URL;
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"], // Frontend and Dashboard
+  origin: ["frontend run:https://zerodha-clone-frontend-aevb.onrender.com", "backend run :https://zerodha-clone-dashboard-gxse.onrender.com"], // Frontend and Dashboard
   credentials: true,
 }));
 
