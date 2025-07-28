@@ -19,7 +19,7 @@ const DashboardLogin = () => {
       
       try {
         const { data } = await axios.post(
-          "http://localhost:3002",
+           `${process.env.REACT_APP_API_URL}`,
           {},
           { withCredentials: true }
         );
@@ -32,7 +32,7 @@ const DashboardLogin = () => {
           });
           // Redirect to the actual dashboard app
           setTimeout(() => {
-            window.location.href = "http://localhost:3001"; // Dashboard app URL
+            window.location.href =`${process.env.REACT_APP_API_URL_FRONT}`; // Dashboard app URL
           }, 1500);
         } else {
           removeCookie("token");
