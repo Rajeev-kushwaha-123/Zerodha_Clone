@@ -1,0 +1,24 @@
+/* General footer link style */
+footer a {
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+  color: #0d6efd !important;
+}
+
+/* Legal & Disclaimers section link style */
+footer .legal-disclaimer a {
+  color: #0d6efd !important; /* Always blue */
+}
+
+footer .legal-disclaimer a:hover {
+  text-decoration: underline !important;
+}
+
+footer ul li {
+  margin-bottom:0.9375rem; /* adjust spacing as needed */
+}
+
