@@ -42,7 +42,8 @@ function Universe() {
 
             <div className="row mt-4">
                 <div className="col-12 text-center mb-5">
-                    <a href="http://localhost:3000/signup" className="btn btn-primary btn-lg">
+                    <a href={`${process.env.REACT_APP_API_URL_F}/signup`}
+                           className="btn btn-primary btn-lg">
                         Sign up for free
                     </a>
                 </div>
