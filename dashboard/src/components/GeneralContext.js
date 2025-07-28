@@ -38,7 +38,7 @@ export const GeneralContextProvider = (props) => {
     const verifyAuth = async () => {
       try {
         const { data } = await axios.post(
-          "http://localhost:3002",
+          `${process.env.REACT_APP_API_URL}`,
           {},
           { withCredentials: true }
         );
@@ -50,14 +50,14 @@ export const GeneralContextProvider = (props) => {
           setIsAuthenticated(false);
           setUser(null);
           // Redirect to frontend login page
-          window.location.href = "http://localhost:3000/login";
+          window.location.href =`${process.env.REACT_APP_API_URL_F}/login`;
         }
       } catch (error) {
         console.error("Auth verification error:", error);
         setIsAuthenticated(false);
         setUser(null);
         // Redirect to frontend login page
-        window.location.href = "http://localhost:3000/login";
+        window.location.href = `${process.env.REACT_APP_API_URL_F}/login`;
       } finally {
         setLoading(false);
       }
@@ -88,15 +88,15 @@ export const GeneralContextProvider = (props) => {
 
   const logout = async () => {
     try {
-      await axios.post("http://localhost:3002/logout", {}, { withCredentials: true });
+      await axios.post(`${process.env.REACT_APP_API_URL}/logout`, {}, { withCredentials: true });
       setUser(null);
       setIsAuthenticated(false);
       // Redirect to frontend application
-      window.location.href = "http://localhost:3000";
+      window.location.href =`${process.env.REACT_APP_API_URL_F}`;
     } catch (error) {
       console.error("Logout error:", error);
       // Still redirect to frontend even if logout fails
-      window.location.href = "http://localhost:3000";
+      window.location.href = `${process.env.REACT_APP_API_URL_F}`;
     }
   };
 
