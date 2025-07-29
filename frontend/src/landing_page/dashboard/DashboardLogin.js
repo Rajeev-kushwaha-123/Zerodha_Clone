@@ -36,12 +36,12 @@ const DashboardLogin = () => {
           }, 1500);
         } else {
           removeCookie("token");
-          // navigate("/login");
+          navigate("/login");
         }
       } catch (error) {
         console.error("Auth verification error:", error);
         removeCookie("token");
-        // navigate("/login");
+        navigate("/login");
       } finally {
         setLoading(false);
       }
