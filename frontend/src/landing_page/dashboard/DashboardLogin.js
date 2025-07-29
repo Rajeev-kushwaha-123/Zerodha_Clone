@@ -12,10 +12,10 @@ const DashboardLogin = () => {
 
   useEffect(() => {
     const verifyCookie = async () => {
-      // if (!cookies.token) {
-      //   navigate("/login");
-      //   return;
-      // }
+      if (!cookies.token) {
+        navigate("/login");
+        return;
+      }
       
       try {
         const { data } = await axios.post(
@@ -36,12 +36,12 @@ const DashboardLogin = () => {
           }, 1500);
         } else {
           removeCookie("token");
-          navigate("/login");
+          // navigate("/login");
         }
       } catch (error) {
         console.error("Auth verification error:", error);
         removeCookie("token");
-        navigate("/login");
+        // navigate("/login");
       } finally {
         setLoading(false);
       }
