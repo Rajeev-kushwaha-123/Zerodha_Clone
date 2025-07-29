@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
 const DashboardLogin = () => {
-  const navigate = useNavigate();
   const [cookies, removeCookie] = useCookies([]);
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(true);
@@ -13,46 +11,45 @@ const DashboardLogin = () => {
   useEffect(() => {
     const verifyCookie = async () => {
       if (!cookies.token) {
-        navigate("/login");
+        window.location.href = "https://zerodha-clone-frontend-aevb.onrender.com/login";
         return;
       }
-      
+
       try {
         const { data } = await axios.post(
-           `${process.env.REACT_APP_API_URL}`,
+          `${process.env.REACT_APP_API_URL}`,
           {},
           { withCredentials: true }
         );
-        
+
         const { status, user } = data;
         if (status) {
           setUsername(user);
           toast(`Welcome ${user}`, {
             position: "top-right",
           });
-          // Redirect to the actual dashboard app
           setTimeout(() => {
-            window.location.href =`${process.env.REACT_APP_API_URL_FRONT}`; // Dashboard app URL
+            window.location.href = `${process.env.REACT_APP_API_URL_FRONT}`;
           }, 1500);
         } else {
           removeCookie("token");
-          navigate("/login");
+          window.location.href = "https://zerodha-clone-frontend-aevb.onrender.com/login";
         }
       } catch (error) {
         console.error("Auth verification error:", error);
         removeCookie("token");
-        navigate("/login");
+        window.location.href = "https://zerodha-clone-frontend-aevb.onrender.com/login";
       } finally {
         setLoading(false);
       }
     };
-    
+
     verifyCookie();
-  }, [cookies, navigate, removeCookie]);
+  }, [cookies, removeCookie]);
 
   const Logout = () => {
     removeCookie("token");
-    navigate("/login");
+    window.location.href = "https://zerodha-clone-frontend-aevb.onrender.com/login";
   };
 
   if (loading) {
