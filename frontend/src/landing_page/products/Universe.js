@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function Universe() {
     return ( 
         <div className="container mt-5">
@@ -42,10 +42,13 @@ function Universe() {
 
             <div className="row mt-4">
                 <div className="col-12 text-center mb-5">
-                    <a href={`${process.env.REACT_APP_API_URL_F}/signup`}
-                           className="btn btn-primary btn-lg">
+                    <Link
+                        to="/signup"
+                        className="btn btn-primary btn-lg w-100"
+                        style={{ maxWidth: '190px' }}
+                    >
                         Sign up for free
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
